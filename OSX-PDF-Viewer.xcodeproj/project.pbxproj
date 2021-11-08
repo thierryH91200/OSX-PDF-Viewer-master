@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		034B30862739505400DAD5C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 034B30852739505400DAD5C3 /* README.md */; };
+		220863D51D99D11D00CC0937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220863D41D99D11D00CC0937 /* AppDelegate.swift */; };
+		220863D81D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 220863D61D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld */; };
+		220863DA1D99D11D00CC0937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220863D91D99D11D00CC0937 /* Assets.xcassets */; };
+		220863DD1D99D11D00CC0937 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220863DB1D99D11D00CC0937 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		034B30852739505400DAD5C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		220863D11D99D11D00CC0937 /* OSX-PDF-Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSX-PDF-Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		220863D41D99D11D00CC0937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		220863D71D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OSX_PDF_Viewer.xcdatamodel; sourceTree = "<group>"; };
+		220863D91D99D11D00CC0937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		220863DC1D99D11D00CC0937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		220863DE1D99D11D00CC0937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220863CE1D99D11C00CC0937 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034B30872739509900DAD5C3 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
+		220863C81D99D11C00CC0937 = {
+			isa = PBXGroup;
+			children = (
+				034B30872739509900DAD5C3 /* Doc */,
+				034B30852739505400DAD5C3 /* README.md */,
+				220863D31D99D11D00CC0937 /* OSX-PDF-Viewer */,
+				220863D21D99D11D00CC0937 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		220863D21D99D11D00CC0937 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				220863D11D99D11D00CC0937 /* OSX-PDF-Viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		220863D31D99D11D00CC0937 /* OSX-PDF-Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				220863D41D99D11D00CC0937 /* AppDelegate.swift */,
+				220863D91D99D11D00CC0937 /* Assets.xcassets */,
+				220863DB1D99D11D00CC0937 /* MainMenu.xib */,
+				220863DE1D99D11D00CC0937 /* Info.plist */,
+				220863D61D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld */,
+			);
+			path = "OSX-PDF-Viewer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		220863D01D99D11C00CC0937 /* OSX-PDF-Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 220863E11D99D11D00CC0937 /* Build configuration list for PBXNativeTarget "OSX-PDF-Viewer" */;
+			buildPhases = (
+				220863CD1D99D11C00CC0937 /* Sources */,
+				220863CE1D99D11C00CC0937 /* Frameworks */,
+				220863CF1D99D11C00CC0937 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OSX-PDF-Viewer";
+			productName = "OSX-PDF-Viewer";
+			productReference = 220863D11D99D11D00CC0937 /* OSX-PDF-Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		220863C91D99D11C00CC0937 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "Patrick Skinner";
+				TargetAttributes = {
+					220863D01D99D11C00CC0937 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 220863CC1D99D11C00CC0937 /* Build configuration list for PBXProject "OSX-PDF-Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 220863C81D99D11C00CC0937;
+			productRefGroup = 220863D21D99D11D00CC0937 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				220863D01D99D11C00CC0937 /* OSX-PDF-Viewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		220863CF1D99D11C00CC0937 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034B30862739505400DAD5C3 /* README.md in Resources */,
+				220863DA1D99D11D00CC0937 /* Assets.xcassets in Resources */,
+				220863DD1D99D11D00CC0937 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		220863CD1D99D11C00CC0937 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220863D51D99D11D00CC0937 /* AppDelegate.swift in Sources */,
+				220863D81D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		220863DB1D99D11D00CC0937 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220863DC1D99D11D00CC0937 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		220863DF1D99D11D00CC0937 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		220863E01D99D11D00CC0937 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		220863E21D99D11D00CC0937 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "OSX-PDF-Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BungoBoiz.OSX-PDF-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		220863E31D99D11D00CC0937 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "OSX-PDF-Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BungoBoiz.OSX-PDF-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		220863CC1D99D11C00CC0937 /* Build configuration list for PBXProject "OSX-PDF-Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220863DF1D99D11D00CC0937 /* Debug */,
+				220863E01D99D11D00CC0937 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		220863E11D99D11D00CC0937 /* Build configuration list for PBXNativeTarget "OSX-PDF-Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220863E21D99D11D00CC0937 /* Debug */,
+				220863E31D99D11D00CC0937 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		220863D61D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				220863D71D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodel */,
+			);
+			currentVersion = 220863D71D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodel */;
+			path = OSX_PDF_Viewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 220863C91D99D11C00CC0937 /* Project object */;
+}

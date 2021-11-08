@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19528" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19528"/>
+        <plugIn identifier="com.apple.pdfkit.ibplugin" version="19528"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="OSX_PDF_Viewer" customModuleProvider="target">
+            <connections>
+                <outlet property="bookmarkSelector" destination="r84-S1-auO" id="1BL-gI-dbK"/>
+                <outlet property="bookmarkTitle" destination="TPL-3I-DAH" id="vrd-J5-DB7"/>
+                <outlet property="ourPDF" destination="MnL-f5-5BI" id="KNX-WA-7Ne"/>
+                <outlet property="pageNum" destination="MCf-w9-pkp" id="UuX-Ga-atv"/>
+                <outlet property="pdfSelector" destination="Js9-Gr-1lb" id="g6A-LD-rt0"/>
+                <outlet property="saveBookmark" destination="RC0-bT-QJh" id="zWO-Dw-Fxd"/>
+                <outlet property="startOpenDocument" destination="STC-Jk-7WS" id="Pgq-s0-4CP"/>
+                <outlet property="startPopUp" destination="NC8-mI-eiz" id="aLB-hP-C51"/>
+                <outlet property="startWindow" destination="HO8-J2-qq9" id="vv4-zj-nkP"/>
+                <outlet property="textField" destination="bQk-pX-CzM" id="IWj-ep-7Ss"/>
+                <outlet property="thumbs" destination="Lpw-pz-AmV" id="nSL-db-u8q"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="zoomIn" destination="9kh-J7-1uc" id="uaW-h5-vf5"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="OSX-PDF-Viewer" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="OSX-PDF-Viewer" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About OSX-PDF-Viewer" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide OSX-PDF-Viewer" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit OSX-PDF-Viewer" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="dMs-cI-mzQ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="File" id="bib-Uj-vzu">
+                        <items>
+                            <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
+                                <connections>
+                                    <action selector="Open:" target="Voe-Tx-rLC" id="Jbz-3o-22f"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
+                            <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="HmO-Ls-i7Q"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                <connections>
+                                    <action selector="runPageLayout:" target="-1" id="Din-rz-gC5"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
+                                <connections>
+                                    <action selector="print:" target="-1" id="qaZ-4w-aoO"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="5QF-Oa-p0T">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="W48-6f-4Dl">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="dRJ-4n-Yzg">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="M6e-cu-g7V"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="6dh-zS-Vam">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="oIA-Rs-6OD"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Document" id="aiY-f7-MTL">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Document" systemMenu="window" id="AO8-vq-hdD">
+                        <items>
+                            <menuItem title="Previous Page" id="g2d-k7-1Mw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="previousPage:" target="Voe-Tx-rLC" id="00b-Ng-5mF"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Next Page" id="TFI-MS-cYS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="nextPage:" target="Voe-Tx-rLC" id="e0N-wW-EB2"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="YSE-je-6jU"/>
+                            <menuItem title="Previous Document" id="tPb-zC-VnY">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="goBackDocument:" target="Voe-Tx-rLC" id="gla-8C-qJf"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Next Document" id="DCR-fm-tPj">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="goForwardDocument:" target="Voe-Tx-rLC" id="e6h-na-1Sq"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="View" id="H8h-7b-M4v">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="View" id="HyV-fh-RgO">
+                        <items>
+                            <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleToolbarShown:" target="-1" id="BXY-wc-z0C"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="runToolbarCustomizationPalette:" target="-1" id="pQI-g3-MTW"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kig-j7-5n7"/>
+                            <menuItem title="Zoom In" id="D1m-CE-DXw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="zoomIn:" target="Voe-Tx-rLC" id="8Ri-ez-SSa"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom Out" id="S7S-n2-Be9">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="zoomOut:" target="Voe-Tx-rLC" id="GcB-6R-EVm"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Fit to Window" id="rW8-kq-NeZ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="scale:" target="Voe-Tx-rLC" id="OCt-oE-lO6"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="aUF-d1-5bR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                            <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="wpr-3q-Mcd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                        <items>
+                            <menuItem title="OSX-PDF-Viewer Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="139" y="433"/>
+        </menu>
+        <window title="OSX-PDF-Viewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="700" height="684"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="700" height="684"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-pr-e0O">
+                        <rect key="frame" x="20" y="6" width="30" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zi9-ab-TrY">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="searchBack:" target="Voe-Tx-rLC" id="N6b-jM-qYu"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQk-pX-CzM">
+                        <rect key="frame" x="20" y="45" width="660" height="117"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="HIr-s2-iws">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-9X-GOx">
+                        <rect key="frame" x="20" y="145" width="660" height="519"/>
+                        <subviews>
+                            <customView id="sai-Pw-8jt">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="519"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <pdfThumbnailView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-pz-AmV">
+                                        <rect key="frame" x="65" y="201" width="75" height="67"/>
+                                        <size key="thumbnailSize" width="64" height="64"/>
+                                    </pdfThumbnailView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lpw-pz-AmV" firstAttribute="top" secondItem="sai-Pw-8jt" secondAttribute="top" id="6S2-eW-y6e"/>
+                                    <constraint firstItem="Lpw-pz-AmV" firstAttribute="leading" secondItem="sai-Pw-8jt" secondAttribute="leading" id="hqf-V6-XrB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lpw-pz-AmV" secondAttribute="trailing" id="jIv-f0-T74"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lpw-pz-AmV" secondAttribute="bottom" id="qfh-pS-Xck"/>
+                                </constraints>
+                            </customView>
+                            <customView id="vAf-qY-Puv">
+                                <rect key="frame" x="214" y="0.0" width="446" height="519"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <pdfView autoresizesSubviews="NO" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnL-f5-5BI">
+                                        <rect key="frame" x="73" y="172" width="300" height="200"/>
+                                    </pdfView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MnL-f5-5BI" secondAttribute="trailing" id="Fkz-Ow-ybU"/>
+                                    <constraint firstAttribute="bottom" secondItem="MnL-f5-5BI" secondAttribute="bottom" id="amM-Ki-Knu"/>
+                                    <constraint firstItem="MnL-f5-5BI" firstAttribute="top" secondItem="vAf-qY-Puv" secondAttribute="top" id="cZi-80-sT6"/>
+                                    <constraint firstItem="MnL-f5-5BI" firstAttribute="leading" secondItem="vAf-qY-Puv" secondAttribute="leading" id="qLl-zm-xZY"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-bT-QJh">
+                        <rect key="frame" x="434" y="6" width="108" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" title="Save Bookmark" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cu1-g8-BUb">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="bookmarkSave:" target="Voe-Tx-rLC" id="uRd-kM-GJU"/>
+                        </connections>
+                    </button>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r84-S1-auO">
+                        <rect key="frame" x="547" y="3" width="137" height="25"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="CPB-yl-6Fa" id="4pQ-0r-toE">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="TKx-Zo-aA1">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="CPB-yl-6Fa"/>
+                                    <menuItem title="Item 2" id="Brp-kK-zFi"/>
+                                    <menuItem title="Item 3" id="CNj-Zb-xNc"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="bookmarkSelect:" target="Voe-Tx-rLC" id="npF-c7-wpX"/>
+                        </connections>
+                    </popUpButton>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vPA-Ub-IWG">
+                        <rect key="frame" x="58" y="8" width="130" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="7Uf-Xe-dfu"/>
+                        </constraints>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Yav-0i-cdL">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                        <connections>
+                            <action selector="search:" target="Voe-Tx-rLC" id="mMm-b1-gTp"/>
+                        </connections>
+                    </searchField>
+                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIQ-Cy-X4E">
+                        <rect key="frame" x="196" y="5" width="30" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="CG7-iR-n8U"/>
+                        </constraints>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p7K-Ay-XJZ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="searchforward:" target="Voe-Tx-rLC" id="hXD-9L-iQt"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-3I-DAH">
+                        <rect key="frame" x="291" y="7" width="135" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Bookmark Title" drawsBackground="YES" id="XUf-ym-MLF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vPA-Ub-IWG" firstAttribute="leading" secondItem="XcI-pr-e0O" secondAttribute="trailing" constant="8" id="29k-mr-Dks"/>
+                    <constraint firstAttribute="bottom" secondItem="LKc-9X-GOx" secondAttribute="bottom" constant="145" id="39j-OR-rhd"/>
+                    <constraint firstItem="bQk-pX-CzM" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="6lN-yY-y8d"/>
+                    <constraint firstItem="vPA-Ub-IWG" firstAttribute="firstBaseline" secondItem="XcI-pr-e0O" secondAttribute="baseline" id="BKa-34-Pbn"/>
+                    <constraint firstAttribute="bottom" secondItem="RC0-bT-QJh" secondAttribute="bottom" constant="7" id="Cen-cf-Cir"/>
+                    <constraint firstAttribute="trailing" secondItem="RC0-bT-QJh" secondAttribute="trailing" constant="158" id="EVL-OJ-BWb"/>
+                    <constraint firstAttribute="bottom" secondItem="XcI-pr-e0O" secondAttribute="bottom" constant="8" id="Ewl-LR-PrR"/>
+                    <constraint firstItem="vPA-Ub-IWG" firstAttribute="baseline" secondItem="TPL-3I-DAH" secondAttribute="firstBaseline" id="HDe-kQ-ZQD"/>
+                    <constraint firstItem="vPA-Ub-IWG" firstAttribute="top" secondItem="XcI-pr-e0O" secondAttribute="top" id="IEL-8F-ODA"/>
+                    <constraint firstItem="XcI-pr-e0O" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="LVB-el-Fnp"/>
+                    <constraint firstItem="fIQ-Cy-X4E" firstAttribute="top" secondItem="TPL-3I-DAH" secondAttribute="top" id="MPd-KO-gFF"/>
+                    <constraint firstItem="TPL-3I-DAH" firstAttribute="leading" secondItem="fIQ-Cy-X4E" secondAttribute="trailing" constant="66" id="MS9-F8-k95"/>
+                    <constraint firstAttribute="bottom" secondItem="bQk-pX-CzM" secondAttribute="bottom" constant="45" id="RbY-8n-V3I"/>
+                    <constraint firstAttribute="trailing" secondItem="TPL-3I-DAH" secondAttribute="trailing" constant="274" id="YcL-Zd-aln"/>
+                    <constraint firstItem="LKc-9X-GOx" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="c39-j6-H1I"/>
+                    <constraint firstAttribute="bottom" secondItem="TPL-3I-DAH" secondAttribute="bottom" constant="7" id="fYs-O2-xFU"/>
+                    <constraint firstAttribute="trailing" secondItem="LKc-9X-GOx" secondAttribute="trailing" constant="20" id="gUz-F8-Gvw"/>
+                    <constraint firstAttribute="bottom" secondItem="fIQ-Cy-X4E" secondAttribute="bottom" constant="7" id="hD6-v7-CKn"/>
+                    <constraint firstAttribute="bottom" secondItem="r84-S1-auO" secondAttribute="bottom" constant="7" id="iwL-j2-G2a"/>
+                    <constraint firstItem="bQk-pX-CzM" firstAttribute="top" secondItem="LKc-9X-GOx" secondAttribute="bottom" constant="8" id="k4s-wU-44E"/>
+                    <constraint firstItem="vPA-Ub-IWG" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="58" id="kA4-Js-Oar"/>
+                    <constraint firstItem="vPA-Ub-IWG" firstAttribute="top" secondItem="RC0-bT-QJh" secondAttribute="top" id="lED-dF-fD7"/>
+                    <constraint firstAttribute="trailing" secondItem="bQk-pX-CzM" secondAttribute="trailing" constant="20" id="mPo-BR-MPz"/>
+                    <constraint firstAttribute="bottom" secondItem="vPA-Ub-IWG" secondAttribute="bottom" constant="8" id="nxZ-Eq-sVf"/>
+                    <constraint firstItem="LKc-9X-GOx" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="nzy-hk-iyX"/>
+                    <constraint firstItem="fIQ-Cy-X4E" firstAttribute="leading" secondItem="vPA-Ub-IWG" secondAttribute="trailing" constant="8" id="vQf-uN-fIB"/>
+                    <constraint firstItem="r84-S1-auO" firstAttribute="leading" secondItem="RC0-bT-QJh" secondAttribute="trailing" constant="8" id="wqE-UR-LtP"/>
+                    <constraint firstAttribute="trailing" secondItem="r84-S1-auO" secondAttribute="trailing" constant="20" id="yO8-N6-VAW"/>
+                </constraints>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="74D6646A-75BE-4E1D-8488-77167B31AD79" explicitIdentifier="Toolbar" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="9kh-J7-1uc">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="gKq-rY-WQg"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="dC5-A1-dNa"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="akh-ZH-Nzg"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Baq-fo-Vxs"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Vur-VM-BIf"/>
+                    <toolbarItem implicitItemIdentifier="6485D005-E108-4605-93AC-DF25E6DFAC8D" label="" paletteLabel="Page Number" id="Z3m-Lw-2Wd">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="45" height="20"/>
+                        <size key="maxSize" width="47" height="45"/>
+                        <textField key="view" verticalHuggingPriority="750" id="MCf-w9-pkp">
+                            <rect key="frame" x="16" y="14" width="47" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="YwX-Dd-fVG">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <connections>
+                            <action selector="jumpToPage:" target="Voe-Tx-rLC" id="ZxS-Ol-UVa"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="A29C32C6-2D9E-4697-98E0-07AA3385B987" label="" paletteLabel="Fit to Window" title="Scale" id="cmN-Bp-Dyp">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="82" height="32"/>
+                        <size key="maxSize" width="82" height="34"/>
+                        <button key="view" verticalHuggingPriority="750" id="JUE-ba-Gl3">
+                            <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" title="Scale" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HTg-FA-SKI">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <connections>
+                            <action selector="scale:" target="Voe-Tx-rLC" id="ZHy-PD-aFb"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="F8504B31-B002-4C6B-B1A5-BD98C90E36EB" label="" paletteLabel="Page Back" image="NSGoLeftTemplate" id="gWq-A0-qMU">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="36" height="25"/>
+                        <size key="maxSize" width="36" height="25"/>
+                        <button key="view" verticalHuggingPriority="750" id="ZPS-fb-qge">
+                            <rect key="frame" x="13" y="14" width="36" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7J4-ij-h0k">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="previousPage:" target="Voe-Tx-rLC" id="yxL-38-tQI"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="75F1CABA-840D-42C6-9064-42921F682F74" label="" paletteLabel="Page Forward" image="NSGoRightTemplate" id="o7d-rU-ReM">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="36" height="25"/>
+                        <size key="maxSize" width="36" height="25"/>
+                        <button key="view" verticalHuggingPriority="750" id="LwM-z9-zsc">
+                            <rect key="frame" x="22" y="14" width="36" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rd3-Lz-CsU">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                                <connections>
+                                    <action selector="nextPage:" target="Voe-Tx-rLC" id="eyF-PW-Utg"/>
+                                </connections>
+                            </buttonCell>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="E38D7D39-E2E9-40B2-A8FE-CBDB6A7EB751" label="" paletteLabel="Zoom In" image="NSAddTemplate" id="t3h-R7-yct">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="29" height="25"/>
+                        <size key="maxSize" width="36" height="25"/>
+                        <button key="view" verticalHuggingPriority="750" id="Q2h-s4-6xg">
+                            <rect key="frame" x="7" y="14" width="36" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Zx-AU-WvN">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="zoomIn:" target="Voe-Tx-rLC" id="2IP-yu-a0d"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="63C95AD5-764F-41C9-BABF-BB53A57C0EC6" label="" paletteLabel="Zoom Out" image="NSRemoveTemplate" id="LQB-jl-JpT">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="36" height="25"/>
+                        <size key="maxSize" width="36" height="25"/>
+                        <button key="view" verticalHuggingPriority="750" id="1I3-eb-4uK">
+                            <rect key="frame" x="12" y="14" width="36" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bh4-o8-ENf">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="zoomOut:" target="Voe-Tx-rLC" id="JrB-ok-p0l"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="9D8640C5-C152-46D8-8E8F-534AB77ADC43" label="" paletteLabel="PDF Selectah" id="jMR-Ud-QWz">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="100" height="26"/>
+                        <size key="maxSize" width="100" height="26"/>
+                        <popUpButton key="view" verticalHuggingPriority="750" id="Js9-Gr-1lb">
+                            <rect key="frame" x="0.0" y="14" width="100" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="S3S-13-oTh" id="TEy-AB-qo2">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="qJ2-r9-iBd">
+                                    <items>
+                                        <menuItem title="Item 1" id="kfG-S7-4gr"/>
+                                        <menuItem state="on" id="S3S-13-oTh"/>
+                                        <menuItem title="Item 3" id="L4M-v3-ouq"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                            <connections>
+                                <action selector="selectPDF:" target="Voe-Tx-rLC" id="KQT-AS-oVE"/>
+                            </connections>
+                        </popUpButton>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="5F392D81-92FF-4013-AD25-A071CA64C9CF" label="" paletteLabel="Document Forward" image="NSGoRightTemplate" id="wOn-uD-8vx">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="36" height="25"/>
+                        <size key="maxSize" width="36" height="25"/>
+                        <button key="view" verticalHuggingPriority="750" id="L2b-DH-wmF">
+                            <rect key="frame" x="36" y="14" width="36" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ycI-2F-w7x">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <connections>
+                            <action selector="goForwardDocument:" target="Voe-Tx-rLC" id="A9J-XB-aJR"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C84D5016-5FFF-41EB-B05E-D2CFD53851D3" label="" paletteLabel="Document Back" image="NSGoLeftTemplate" id="GDK-aI-xFx">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="36" height="25"/>
+                        <size key="maxSize" width="36" height="25"/>
+                        <button key="view" verticalHuggingPriority="750" id="QTt-wY-eky">
+                            <rect key="frame" x="27" y="14" width="36" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WDj-Ng-mdh">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <connections>
+                            <action selector="goBackDocument:" target="Voe-Tx-rLC" id="H8B-j7-7X8"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="LQB-jl-JpT"/>
+                    <toolbarItem reference="t3h-R7-yct"/>
+                    <toolbarItem reference="cmN-Bp-Dyp"/>
+                    <toolbarItem reference="Vur-VM-BIf"/>
+                    <toolbarItem reference="gWq-A0-qMU"/>
+                    <toolbarItem reference="Z3m-Lw-2Wd"/>
+                    <toolbarItem reference="o7d-rU-ReM"/>
+                    <toolbarItem reference="Vur-VM-BIf"/>
+                    <toolbarItem reference="GDK-aI-xFx"/>
+                    <toolbarItem reference="jMR-Ud-QWz"/>
+                    <toolbarItem reference="wOn-uD-8vx"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <contentBorderThickness minY="36"/>
+            <point key="canvasLocation" x="906" y="937"/>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="HO8-J2-qq9">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="283" y="305" width="480" height="171"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <view key="contentView" id="dXX-5y-mzB">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="STC-Jk-7WS">
+                        <rect key="frame" x="6" y="13" width="133" height="32"/>
+                        <buttonCell key="cell" type="push" title="Open Document" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0bz-Ub-VfE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Open:" target="Voe-Tx-rLC" id="Yws-nd-396"/>
+                        </connections>
+                    </button>
+                    <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NC8-mI-eiz">
+                        <rect key="frame" x="137" y="16" width="332" height="25"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="fR2-uK-wDC">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="qD3-oJ-fok">
+                                <items>
+                                    <menuItem title="Item 1" id="izG-Vp-j8q"/>
+                                    <menuItem title="Item 2" id="mba-cT-dXg"/>
+                                    <menuItem title="Item 3" id="J9T-ri-LUk"/>
+                                </items>
+                            </menu>
+                            <connections>
+                                <action selector="openRecent:" target="Voe-Tx-rLC" id="SZ3-f2-6Xf"/>
+                            </connections>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t49-Wb-ROI">
+                        <rect key="frame" x="39" y="118" width="413" height="43"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Timbo Slice PDF Viewer" id="5x3-ax-mmD">
+                            <font key="font" size="36" name="Helvetica-Bold"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OBo-Ob-0d5">
+                        <rect key="frame" x="11" y="48" width="463" height="70"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="OAk-Q2-cSx">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Welcome to the Timbo Slice PDF viewer, If this is your first time consider opening a new file and entering the exciting world of PDF viewing. If you're  returning for a bit more PDF viewing action, consider opening a recently viewed file from the menu in the lower right.</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NC8-mI-eiz" firstAttribute="leading" secondItem="STC-Jk-7WS" secondAttribute="trailing" constant="8" id="5dg-SD-eG7"/>
+                    <constraint firstItem="STC-Jk-7WS" firstAttribute="top" secondItem="OBo-Ob-0d5" secondAttribute="bottom" constant="8" id="B4A-aE-Rb0"/>
+                    <constraint firstItem="NC8-mI-eiz" firstAttribute="top" secondItem="OBo-Ob-0d5" secondAttribute="bottom" constant="8" id="E0w-Hy-s06"/>
+                    <constraint firstAttribute="bottom" secondItem="STC-Jk-7WS" secondAttribute="bottom" constant="20" id="Fp0-Oh-m8K"/>
+                    <constraint firstItem="NC8-mI-eiz" firstAttribute="top" secondItem="t49-Wb-ROI" secondAttribute="bottom" constant="78" id="IwG-xk-mQ0"/>
+                    <constraint firstItem="t49-Wb-ROI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dXX-5y-mzB" secondAttribute="leading" symbolic="YES" id="JLI-qJ-TE3"/>
+                    <constraint firstAttribute="bottom" secondItem="NC8-mI-eiz" secondAttribute="bottom" constant="20" id="cc8-2I-PR8"/>
+                    <constraint firstAttribute="trailing" secondItem="t49-Wb-ROI" secondAttribute="trailing" constant="35" id="dUs-VY-yez"/>
+                    <constraint firstItem="OBo-Ob-0d5" firstAttribute="leading" secondItem="dXX-5y-mzB" secondAttribute="leading" constant="13" id="dXx-hg-m9t"/>
+                    <constraint firstItem="STC-Jk-7WS" firstAttribute="leading" secondItem="dXX-5y-mzB" secondAttribute="leading" constant="13" id="dZ2-53-XS3"/>
+                    <constraint firstItem="NC8-mI-eiz" firstAttribute="top" secondItem="OBo-Ob-0d5" secondAttribute="bottom" constant="8" id="ey8-9a-SlS"/>
+                    <constraint firstAttribute="trailing" secondItem="OBo-Ob-0d5" secondAttribute="trailing" constant="13" id="fMH-4A-HMb"/>
+                    <constraint firstItem="OBo-Ob-0d5" firstAttribute="top" secondItem="dXX-5y-mzB" secondAttribute="top" constant="50" id="nx4-Dd-Yiv"/>
+                    <constraint firstAttribute="trailing" secondItem="NC8-mI-eiz" secondAttribute="trailing" constant="20" id="rgP-c7-WU1"/>
+                    <constraint firstItem="t49-Wb-ROI" firstAttribute="top" secondItem="dXX-5y-mzB" secondAttribute="top" constant="7" id="zKx-Er-Bve"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="85" y="887.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="14" height="13"/>
+        <image name="NSGoLeftTemplate" width="10" height="14"/>
+        <image name="NSGoRightTemplate" width="10" height="14"/>
+        <image name="NSRemoveTemplate" width="14" height="4"/>
+    </resources>
+</document>
