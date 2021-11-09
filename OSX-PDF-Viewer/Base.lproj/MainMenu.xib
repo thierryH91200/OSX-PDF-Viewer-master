@@ -225,8 +225,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="700" height="684"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-pr-e0O">
-                        <rect key="frame" x="20" y="6" width="30" height="25"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-pr-e0O">
+                        <rect key="frame" x="19" y="6" width="32" height="25"/>
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zi9-ab-TrY">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -250,8 +250,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="204" height="519"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <pdfThumbnailView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-pz-AmV">
-                                        <rect key="frame" x="65" y="201" width="75" height="67"/>
+                                    <pdfThumbnailView translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-pz-AmV">
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="519"/>
                                         <size key="thumbnailSize" width="64" height="64"/>
                                     </pdfThumbnailView>
                                 </subviews>
@@ -266,8 +266,8 @@
                                 <rect key="frame" x="214" y="0.0" width="446" height="519"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <pdfView autoresizesSubviews="NO" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnL-f5-5BI">
-                                        <rect key="frame" x="73" y="172" width="300" height="200"/>
+                                    <pdfView autoresizesSubviews="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnL-f5-5BI">
+                                        <rect key="frame" x="0.0" y="0.0" width="446" height="519"/>
                                     </pdfView>
                                 </subviews>
                                 <constraints>
@@ -283,8 +283,8 @@
                             <real value="250"/>
                         </holdingPriorities>
                     </splitView>
-                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-bT-QJh">
-                        <rect key="frame" x="434" y="6" width="108" height="25"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-bT-QJh">
+                        <rect key="frame" x="433" y="5" width="110" height="26"/>
                         <buttonCell key="cell" type="roundTextured" title="Save Bookmark" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cu1-g8-BUb">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -326,9 +326,6 @@
                     </searchField>
                     <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIQ-Cy-X4E">
                         <rect key="frame" x="196" y="5" width="30" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="28" id="CG7-iR-n8U"/>
-                        </constraints>
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p7K-Ay-XJZ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -337,8 +334,8 @@
                             <action selector="searchforward:" target="Voe-Tx-rLC" id="hXD-9L-iQt"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-3I-DAH">
-                        <rect key="frame" x="291" y="7" width="135" height="22"/>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-3I-DAH">
+                        <rect key="frame" x="274" y="7" width="152" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Bookmark Title" drawsBackground="YES" id="XUf-ym-MLF">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -352,16 +349,18 @@
                     <constraint firstItem="bQk-pX-CzM" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="6lN-yY-y8d"/>
                     <constraint firstItem="vPA-Ub-IWG" firstAttribute="firstBaseline" secondItem="XcI-pr-e0O" secondAttribute="baseline" id="BKa-34-Pbn"/>
                     <constraint firstAttribute="bottom" secondItem="RC0-bT-QJh" secondAttribute="bottom" constant="7" id="Cen-cf-Cir"/>
+                    <constraint firstItem="RC0-bT-QJh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TPL-3I-DAH" secondAttribute="trailing" constant="8" symbolic="YES" id="D3U-Ud-yWg"/>
+                    <constraint firstItem="TPL-3I-DAH" firstAttribute="leading" secondItem="fIQ-Cy-X4E" secondAttribute="trailing" constant="48" id="EEk-AQ-0jA"/>
                     <constraint firstAttribute="trailing" secondItem="RC0-bT-QJh" secondAttribute="trailing" constant="158" id="EVL-OJ-BWb"/>
                     <constraint firstAttribute="bottom" secondItem="XcI-pr-e0O" secondAttribute="bottom" constant="8" id="Ewl-LR-PrR"/>
                     <constraint firstItem="vPA-Ub-IWG" firstAttribute="baseline" secondItem="TPL-3I-DAH" secondAttribute="firstBaseline" id="HDe-kQ-ZQD"/>
                     <constraint firstItem="vPA-Ub-IWG" firstAttribute="top" secondItem="XcI-pr-e0O" secondAttribute="top" id="IEL-8F-ODA"/>
                     <constraint firstItem="XcI-pr-e0O" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="LVB-el-Fnp"/>
                     <constraint firstItem="fIQ-Cy-X4E" firstAttribute="top" secondItem="TPL-3I-DAH" secondAttribute="top" id="MPd-KO-gFF"/>
-                    <constraint firstItem="TPL-3I-DAH" firstAttribute="leading" secondItem="fIQ-Cy-X4E" secondAttribute="trailing" constant="66" id="MS9-F8-k95"/>
                     <constraint firstAttribute="bottom" secondItem="bQk-pX-CzM" secondAttribute="bottom" constant="45" id="RbY-8n-V3I"/>
                     <constraint firstAttribute="trailing" secondItem="TPL-3I-DAH" secondAttribute="trailing" constant="274" id="YcL-Zd-aln"/>
                     <constraint firstItem="LKc-9X-GOx" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="c39-j6-H1I"/>
+                    <constraint firstItem="TPL-3I-DAH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fIQ-Cy-X4E" secondAttribute="trailing" constant="8" symbolic="YES" id="deT-nP-Yfn"/>
                     <constraint firstAttribute="bottom" secondItem="TPL-3I-DAH" secondAttribute="bottom" constant="7" id="fYs-O2-xFU"/>
                     <constraint firstAttribute="trailing" secondItem="LKc-9X-GOx" secondAttribute="trailing" constant="20" id="gUz-F8-Gvw"/>
                     <constraint firstAttribute="bottom" secondItem="fIQ-Cy-X4E" secondAttribute="bottom" constant="7" id="hD6-v7-CKn"/>
@@ -372,6 +371,7 @@
                     <constraint firstAttribute="trailing" secondItem="bQk-pX-CzM" secondAttribute="trailing" constant="20" id="mPo-BR-MPz"/>
                     <constraint firstAttribute="bottom" secondItem="vPA-Ub-IWG" secondAttribute="bottom" constant="8" id="nxZ-Eq-sVf"/>
                     <constraint firstItem="LKc-9X-GOx" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="nzy-hk-iyX"/>
+                    <constraint firstItem="TPL-3I-DAH" firstAttribute="centerX" secondItem="bQk-pX-CzM" secondAttribute="centerX" id="ux5-RQ-9x0"/>
                     <constraint firstItem="fIQ-Cy-X4E" firstAttribute="leading" secondItem="vPA-Ub-IWG" secondAttribute="trailing" constant="8" id="vQf-uN-fIB"/>
                     <constraint firstItem="r84-S1-auO" firstAttribute="leading" secondItem="RC0-bT-QJh" secondAttribute="trailing" constant="8" id="wqE-UR-LtP"/>
                     <constraint firstAttribute="trailing" secondItem="r84-S1-auO" secondAttribute="trailing" constant="20" id="yO8-N6-VAW"/>
@@ -387,11 +387,11 @@
                     <toolbarItem implicitItemIdentifier="6485D005-E108-4605-93AC-DF25E6DFAC8D" label="" paletteLabel="Page Number" id="Z3m-Lw-2Wd">
                         <nil key="toolTip"/>
                         <size key="minSize" width="45" height="20"/>
-                        <size key="maxSize" width="47" height="45"/>
+                        <size key="maxSize" width="61" height="45"/>
                         <textField key="view" verticalHuggingPriority="750" id="MCf-w9-pkp">
-                            <rect key="frame" x="16" y="14" width="47" height="45"/>
+                            <rect key="frame" x="9" y="14" width="61" height="23"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="YwX-Dd-fVG">
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="YwX-Dd-fVG">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -559,8 +559,8 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="480" height="171"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
-            <view key="contentView" id="dXX-5y-mzB">
-                <rect key="frame" x="0.0" y="0.0" width="485" height="168"/>
+            <view key="contentView" misplaced="YES" id="dXX-5y-mzB">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="171"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="STC-Jk-7WS">

@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var startWindow: NSWindow!
     @IBOutlet weak var window: NSWindow!
+    
     @IBOutlet weak var ourPDF: PDFView!
     @IBOutlet weak var thumbs: PDFThumbnailView!
     @IBOutlet weak var pageNum: NSTextField!
@@ -37,6 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var bookmarks = [String: [String]]()
     var recentDocuments = [String]()
     
+    let defaults = UserDefaults.standard
+
     
         //////////////////////////////////
         //          StartWindow         //
@@ -78,7 +81,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Create a openPanel to select one or more PDFs to display
     @IBAction func Open(_ sender: Any) {
         
-        let defaults = UserDefaults.standard
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
         openPanel.canChooseDirectories = false
@@ -92,7 +94,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     if (self.recentDocuments.count < 6){
                         self.recentDocuments.append(url.absoluteString)
                         
-                        defaults.set(self.recentDocuments, forKey: "recentDictionaryKey")
+                        self.defaults.set(self.recentDocuments, forKey: "recentDictionaryKey")
                     } else {
                         for item in self.recentDocuments{
                             if self.recentDocuments.firstIndex(of: item)! > 0 {
@@ -100,7 +102,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             }
                         }
                         self.recentDocuments.insert(url.absoluteString, at: self.recentDocuments.count)
-                        defaults.set(self.recentDocuments, forKey: "recentDictionaryKey")
+                        self.defaults.set(self.recentDocuments, forKey: "recentDictionaryKey")
                     }
                     
                 }
@@ -119,7 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 
                 if (dict[PDFDocumentAttribute.titleAttribute] != nil ) {
                     self.window.title = dict[PDFDocumentAttribute.titleAttribute] as! String
-                } else if(self.urls[self.urls.endIndex-1].lastPathComponent != nil){
+                } else if(self.urls[self.urls.endIndex-1].lastPathComponent != ""){
                     self.window.title = self.urls[self.urls.endIndex-1].lastPathComponent
                 }
                 
@@ -154,10 +156,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentMinSize = NSSize(width: 700, height: 700)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updatePageNum), name: NSNotification.Name.PDFViewPageChanged, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(noteUpdated), name: NSText.didChangeNotification, object: nil)
         
-        let defaults = UserDefaults.standard
         if let noteDictionary = defaults.dictionary(forKey: "noteDictionaryKey"){
             notes = noteDictionary as! [String: String]
         }
@@ -188,6 +188,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ aNotification: Notification) {
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed (_ sender: NSApplication) -> Bool {
+        return true
+    }
+    
+
     
     
         //////////////////////////////////
@@ -372,9 +378,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 self.window.title = NSURL(fileURLWithPath: recentDocuments[index-2]).lastPathComponent!
             }
             
-//            self.pdfSelector.addItemWithTitle(         self.pdf.documentURL?.lastPathComponent!)
+                //            self.pdfSelector.addItemWithTitle(         self.pdf.documentURL?.lastPathComponent!)
             self.pdfSelector.addItem         (withTitle: self.pdf.documentURL!.lastPathComponent)
-
+            
             self.pdfSelector.selectItem(at: 0)
         } else {
             self.pdf = PDFDocument(url: urls[index])
@@ -385,10 +391,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if (dict[PDFDocumentAttribute.titleAttribute] != nil) {
                 self.window.title = dict[PDFDocumentAttribute.titleAttribute] as! String
             } else
-            if self.urls[index].lastPathComponent != nil {
+            if self.urls[index].lastPathComponent != "" {
                 self.window.title = self.urls[index].lastPathComponent
             }
-            
             pdfSelector.selectItem(at: index)
         }
         
@@ -416,8 +421,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let noteKey = (ourPDF.currentPage?.label)! + (pdf!.documentURL?.deletingPathExtension().lastPathComponent)!
             notes[noteKey] = textField.stringValue
         }
-        
-        let defaults = UserDefaults.standard
         defaults.set(notes, forKey: "noteDictionaryKey")
     }
     
@@ -436,20 +439,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func bookmarkSave(_ sender: Any) {
         if(pdf != nil){
-            let docUrl = (pdf!.documentURL?.absoluteString)
-            if (bookmarkTitle.stringValue != "") {
+            let docUrl = pdf!.documentURL?.absoluteString
+            if bookmarkTitle.stringValue != "" {
                 
-//                bookmarks[bookmarkTitle.stringValue] = [ourPDF.currentPage.label, docUrl, bookmarkTitle.stringValue]
-//                bookmarkSelector.addItem(withTitle: bookmarkTitle.stringValue)
-//                bookmarkTitle.stringValue = ""
-                let defaults = UserDefaults.standard
+                bookmarks[bookmarkTitle.stringValue] = [(ourPDF.currentPage?.label)!, docUrl!, bookmarkTitle.stringValue]
+                bookmarkSelector.addItem(withTitle: bookmarkTitle.stringValue)
+                bookmarkTitle.stringValue = ""
+
                 defaults.set(bookmarks, forKey: "bookmarkDictionaryKey")
             }
         }
     }
     
     
-    @IBAction func bookmarkSelect(sender: AnyObject) {
+    @IBAction func bookmarkSelect(_ sender: Any) {
         let list: NSPopUpButton = sender as! NSPopUpButton
         
         if (list.titleOfSelectedItem != "Select Bookmark"){
@@ -458,13 +461,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             let pageNum = Int(pageString![0])
             
-            
             ourPDF.go(to: pdf.page(at: pageNum! - 1)!)
         }
-        
     }
-    
-    
-    
 }
 

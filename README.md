@@ -1,3 +1,17 @@
+
+
+<p align="center">
+    <img src="https://img.shields.io/badge/macOS-10.11+-red" />
+    <img src="https://img.shields.io/badge/Swift-5.1-orange.svg" />
+</p>
+<p align="center">
+<img src="https://img.shields.io/badge/SwifUI-2-ff69b4.svg" />
+<img src="https://img.shields.io/badge/License-MIT-lightgrey" />
+<a href="https://swift.org/package-manager">
+<img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
+</a>
+</p>
+
 # OSX-PDF-Viewer
 
 A PDF viewer created for a 3rd year Computer Science project. A Cocoa application created using Swift and the PDFkit provided by the Quartz framework. Created by Patrick Skinner and Cassidy Mowat.
