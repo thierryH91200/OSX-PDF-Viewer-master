@@ -28,7 +28,6 @@
                 <outlet property="textField" destination="bQk-pX-CzM" id="IWj-ep-7Ss"/>
                 <outlet property="thumbs" destination="Lpw-pz-AmV" id="nSL-db-u8q"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
-                <outlet property="zoomIn" destination="9kh-J7-1uc" id="uaW-h5-vf5"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -164,7 +163,7 @@
                             <menuItem title="Zoom In" id="D1m-CE-DXw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="zoomIn:" target="Voe-Tx-rLC" id="8Ri-ez-SSa"/>
+                                    <action selector="zoomIn:" target="Voe-Tx-rLC" id="QCU-sO-8n0"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Zoom Out" id="S7S-n2-Be9">
@@ -451,9 +450,12 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                             <connections>
-                                <action selector="zoomIn:" target="Voe-Tx-rLC" id="2IP-yu-a0d"/>
+                                <action selector="zoomIn:" target="Voe-Tx-rLC" id="TpN-IC-37D"/>
                             </connections>
                         </button>
+                        <connections>
+                            <action selector="zoomIn:" target="Voe-Tx-rLC" id="GRW-FZ-ctn"/>
+                        </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="63C95AD5-764F-41C9-BABF-BB53A57C0EC6" label="" paletteLabel="Zoom Out" image="NSRemoveTemplate" sizingBehavior="auto" id="LQB-jl-JpT">
                         <nil key="toolTip"/>
