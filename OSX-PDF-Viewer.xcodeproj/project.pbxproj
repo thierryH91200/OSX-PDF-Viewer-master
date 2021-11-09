@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		034B30862739505400DAD5C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 034B30852739505400DAD5C3 /* README.md */; };
-		03DCA1F5273A82DE002A06D0 /* capture20.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F3273A82DE002A06D0 /* capture20.pdf */; };
 		03DCA1F7273A8647002A06D0 /* Capture40.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F6273A8647002A06D0 /* Capture40.png */; };
 		03DCA1F9273A866C002A06D0 /* Capture50.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F8273A866C002A06D0 /* Capture50.png */; };
 		220863D51D99D11D00CC0937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220863D41D99D11D00CC0937 /* AppDelegate.swift */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		034B30852739505400DAD5C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		03DCA1F3273A82DE002A06D0 /* capture20.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = capture20.pdf; sourceTree = "<group>"; };
 		03DCA1F6273A8647002A06D0 /* Capture40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture40.png; sourceTree = "<group>"; };
 		03DCA1F8273A866C002A06D0 /* Capture50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture50.png; sourceTree = "<group>"; };
 		220863D11D99D11D00CC0937 /* OSX-PDF-Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSX-PDF-Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +42,6 @@
 		034B30872739509900DAD5C3 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
-				03DCA1F3273A82DE002A06D0 /* capture20.pdf */,
 				03DCA1F8273A866C002A06D0 /* Capture50.png */,
 				03DCA1F6273A8647002A06D0 /* Capture40.png */,
 			);
@@ -142,7 +139,6 @@
 			files = (
 				034B30862739505400DAD5C3 /* README.md in Resources */,
 				03DCA1F9273A866C002A06D0 /* Capture50.png in Resources */,
-				03DCA1F5273A82DE002A06D0 /* capture20.pdf in Resources */,
 				03DCA1F7273A8647002A06D0 /* Capture40.png in Resources */,
 				220863DA1D99D11D00CC0937 /* Assets.xcassets in Resources */,
 				220863DD1D99D11D00CC0937 /* MainMenu.xib in Resources */,
