@@ -1,5 +1,11 @@
 
 
+# Update
+
+reference : https://github.com/PatrickSkinner/OSX-PDF-Viewer
+
+
+# Documentation
 <p align="center">
     <img src="https://img.shields.io/badge/macOS-10.11+-red" />
     <img src="https://img.shields.io/badge/Swift-5.1-orange.svg" />
@@ -10,7 +16,7 @@
 <p align="center">
 <img src="Doc/Capture40.png" alt="Sample">
 <p align="center">
-<em>page 2</em> 
+<em>Wiindow 1</em> 
 </p>
 </p>
 

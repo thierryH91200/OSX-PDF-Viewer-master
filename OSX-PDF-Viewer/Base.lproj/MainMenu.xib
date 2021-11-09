@@ -213,7 +213,7 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="139" y="433"/>
+            <point key="canvasLocation" x="246" y="-1692"/>
         </menu>
         <window title="OSX-PDF-Viewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
@@ -234,8 +234,8 @@
                             <action selector="searchBack:" target="Voe-Tx-rLC" id="N6b-jM-qYu"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQk-pX-CzM">
-                        <rect key="frame" x="20" y="45" width="660" height="117"/>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bQk-pX-CzM">
+                        <rect key="frame" x="20" y="45" width="660" height="92"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="HIr-s2-iws">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -323,8 +323,8 @@
                             <action selector="search:" target="Voe-Tx-rLC" id="mMm-b1-gTp"/>
                         </connections>
                     </searchField>
-                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIQ-Cy-X4E">
-                        <rect key="frame" x="196" y="5" width="30" height="25"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fIQ-Cy-X4E">
+                        <rect key="frame" x="195" y="5" width="32" height="25"/>
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p7K-Ay-XJZ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -536,19 +536,19 @@
                 </defaultToolbarItems>
             </toolbar>
             <contentBorderThickness minY="36"/>
-            <point key="canvasLocation" x="906" y="937"/>
+            <point key="canvasLocation" x="359" y="-962"/>
         </window>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="HO8-J2-qq9">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="480" height="171"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
-            <view key="contentView" misplaced="YES" id="dXX-5y-mzB">
+            <view key="contentView" id="dXX-5y-mzB">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="171"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="STC-Jk-7WS">
-                        <rect key="frame" x="6" y="13" width="133" height="32"/>
+                        <rect key="frame" x="6" y="16" width="133" height="32"/>
                         <buttonCell key="cell" type="push" title="Open Document" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0bz-Ub-VfE">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -558,7 +558,7 @@
                         </connections>
                     </button>
                     <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NC8-mI-eiz">
-                        <rect key="frame" x="137" y="16" width="332" height="25"/>
+                        <rect key="frame" x="137" y="19" width="327" height="25"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="fR2-uK-wDC">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -575,7 +575,7 @@
                         </popUpButtonCell>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t49-Wb-ROI">
-                        <rect key="frame" x="39" y="118" width="413" height="43"/>
+                        <rect key="frame" x="39" y="121" width="413" height="43"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Timbo Slice PDF Viewer" id="5x3-ax-mmD">
                             <font key="font" size="36" name="Helvetica-Bold"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -583,7 +583,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OBo-Ob-0d5">
-                        <rect key="frame" x="11" y="48" width="463" height="70"/>
+                        <rect key="frame" x="11" y="51" width="463" height="70"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="OAk-Q2-cSx">
                             <font key="font" metaFont="system"/>
                             <string key="title">Welcome to the Timbo Slice PDF viewer, If this is your first time consider opening a new file and entering the exciting world of PDF viewing. If you're  returning for a bit more PDF viewing action, consider opening a recently viewed file from the menu in the lower right.</string>
@@ -593,24 +593,22 @@
                     </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="t49-Wb-ROI" firstAttribute="top" secondItem="dXX-5y-mzB" secondAttribute="top" constant="7" id="4dl-ae-E0T"/>
                     <constraint firstItem="NC8-mI-eiz" firstAttribute="leading" secondItem="STC-Jk-7WS" secondAttribute="trailing" constant="8" id="5dg-SD-eG7"/>
+                    <constraint firstItem="STC-Jk-7WS" firstAttribute="leading" secondItem="dXX-5y-mzB" secondAttribute="leading" constant="13" id="Ahr-1l-kI0"/>
                     <constraint firstItem="STC-Jk-7WS" firstAttribute="top" secondItem="OBo-Ob-0d5" secondAttribute="bottom" constant="8" id="B4A-aE-Rb0"/>
                     <constraint firstItem="NC8-mI-eiz" firstAttribute="top" secondItem="OBo-Ob-0d5" secondAttribute="bottom" constant="8" id="E0w-Hy-s06"/>
-                    <constraint firstAttribute="bottom" secondItem="STC-Jk-7WS" secondAttribute="bottom" constant="20" id="Fp0-Oh-m8K"/>
+                    <constraint firstItem="t49-Wb-ROI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dXX-5y-mzB" secondAttribute="leading" symbolic="YES" id="Ghg-xH-J3K"/>
                     <constraint firstItem="NC8-mI-eiz" firstAttribute="top" secondItem="t49-Wb-ROI" secondAttribute="bottom" constant="78" id="IwG-xk-mQ0"/>
-                    <constraint firstItem="t49-Wb-ROI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dXX-5y-mzB" secondAttribute="leading" symbolic="YES" id="JLI-qJ-TE3"/>
-                    <constraint firstAttribute="bottom" secondItem="NC8-mI-eiz" secondAttribute="bottom" constant="20" id="cc8-2I-PR8"/>
-                    <constraint firstAttribute="trailing" secondItem="t49-Wb-ROI" secondAttribute="trailing" constant="35" id="dUs-VY-yez"/>
-                    <constraint firstItem="OBo-Ob-0d5" firstAttribute="leading" secondItem="dXX-5y-mzB" secondAttribute="leading" constant="13" id="dXx-hg-m9t"/>
-                    <constraint firstItem="STC-Jk-7WS" firstAttribute="leading" secondItem="dXX-5y-mzB" secondAttribute="leading" constant="13" id="dZ2-53-XS3"/>
+                    <constraint firstAttribute="trailing" secondItem="t49-Wb-ROI" secondAttribute="trailing" constant="30" id="KgH-9a-no2"/>
+                    <constraint firstAttribute="trailing" secondItem="NC8-mI-eiz" secondAttribute="trailing" constant="20" symbolic="YES" id="NXl-8D-hN3"/>
+                    <constraint firstItem="STC-Jk-7WS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OBo-Ob-0d5" secondAttribute="leading" id="S3Y-Le-wix"/>
+                    <constraint firstAttribute="trailing" secondItem="OBo-Ob-0d5" secondAttribute="trailing" constant="8" id="eEh-BN-qcv"/>
                     <constraint firstItem="NC8-mI-eiz" firstAttribute="top" secondItem="OBo-Ob-0d5" secondAttribute="bottom" constant="8" id="ey8-9a-SlS"/>
-                    <constraint firstAttribute="trailing" secondItem="OBo-Ob-0d5" secondAttribute="trailing" constant="13" id="fMH-4A-HMb"/>
-                    <constraint firstItem="OBo-Ob-0d5" firstAttribute="top" secondItem="dXX-5y-mzB" secondAttribute="top" constant="50" id="nx4-Dd-Yiv"/>
-                    <constraint firstAttribute="trailing" secondItem="NC8-mI-eiz" secondAttribute="trailing" constant="20" id="rgP-c7-WU1"/>
-                    <constraint firstItem="t49-Wb-ROI" firstAttribute="top" secondItem="dXX-5y-mzB" secondAttribute="top" constant="7" id="zKx-Er-Bve"/>
+                    <constraint firstItem="OBo-Ob-0d5" firstAttribute="top" secondItem="t49-Wb-ROI" secondAttribute="bottom" id="mkw-ON-ER1"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="85" y="887.5"/>
+            <point key="canvasLocation" x="249" y="-1507"/>
         </window>
     </objects>
     <resources>

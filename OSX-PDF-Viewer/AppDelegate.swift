@@ -193,13 +193,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-
-    
-    
-        //////////////////////////////////
-        //        Zoom Functions        //
-        //////////////////////////////////
-    
+        // MARK: - Zoom Functions
     @IBAction func zoomIn(_ sender: Any) {
         ourPDF.autoScales = false
         ourPDF.zoomIn(sender)
@@ -214,18 +208,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ourPDF.autoScales = true
     }
     
-        //////////////////////////////////
-        //        Page Navigation       //
-        //////////////////////////////////
-    
+        // MARK: -Page Navigation
     @IBAction func previousPage(_ sender: Any) {
-        if (ourPDF.canGoToPreviousPage) {
+        if ourPDF.canGoToPreviousPage == true {
             ourPDF.goToPreviousPage(sender)
         }
     }
     
     @IBAction func nextPage(_ sender: Any) {
-        if ourPDF.canGoToNextPage {
+        if ourPDF.canGoToNextPage == true {
             ourPDF.goToNextPage(sender)
         }
     }
