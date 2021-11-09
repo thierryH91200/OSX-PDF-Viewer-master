@@ -413,10 +413,8 @@
                             <action selector="scale:" target="Voe-Tx-rLC" id="ZHy-PD-aFb"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="F8504B31-B002-4C6B-B1A5-BD98C90E36EB" label="" paletteLabel="Page Back" image="NSGoLeftTemplate" id="gWq-A0-qMU">
+                    <toolbarItem implicitItemIdentifier="F8504B31-B002-4C6B-B1A5-BD98C90E36EB" label="" paletteLabel="Page Back" image="NSGoLeftTemplate" sizingBehavior="auto" id="gWq-A0-qMU">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="36" height="25"/>
-                        <size key="maxSize" width="36" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="ZPS-fb-qge">
                             <rect key="frame" x="13" y="14" width="36" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -429,10 +427,8 @@
                             </connections>
                         </button>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="75F1CABA-840D-42C6-9064-42921F682F74" label="" paletteLabel="Page Forward" image="NSGoRightTemplate" id="o7d-rU-ReM">
+                    <toolbarItem implicitItemIdentifier="75F1CABA-840D-42C6-9064-42921F682F74" label="" paletteLabel="Page Forward" image="NSGoRightTemplate" sizingBehavior="auto" id="o7d-rU-ReM">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="36" height="25"/>
-                        <size key="maxSize" width="36" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="LwM-z9-zsc">
                             <rect key="frame" x="22" y="14" width="36" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -445,10 +441,8 @@
                             </buttonCell>
                         </button>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="E38D7D39-E2E9-40B2-A8FE-CBDB6A7EB751" label="" paletteLabel="Zoom In" image="NSAddTemplate" id="t3h-R7-yct">
+                    <toolbarItem implicitItemIdentifier="E38D7D39-E2E9-40B2-A8FE-CBDB6A7EB751" label="" paletteLabel="Zoom In" image="NSAddTemplate" sizingBehavior="auto" id="t3h-R7-yct">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="29" height="25"/>
-                        <size key="maxSize" width="36" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="Q2h-s4-6xg">
                             <rect key="frame" x="7" y="14" width="36" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -461,10 +455,8 @@
                             </connections>
                         </button>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="63C95AD5-764F-41C9-BABF-BB53A57C0EC6" label="" paletteLabel="Zoom Out" image="NSRemoveTemplate" id="LQB-jl-JpT">
+                    <toolbarItem implicitItemIdentifier="63C95AD5-764F-41C9-BABF-BB53A57C0EC6" label="" paletteLabel="Zoom Out" image="NSRemoveTemplate" sizingBehavior="auto" id="LQB-jl-JpT">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="36" height="25"/>
-                        <size key="maxSize" width="36" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="1I3-eb-4uK">
                             <rect key="frame" x="12" y="14" width="36" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -477,10 +469,8 @@
                             </connections>
                         </button>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="9D8640C5-C152-46D8-8E8F-534AB77ADC43" label="" paletteLabel="PDF Selectah" id="jMR-Ud-QWz">
+                    <toolbarItem implicitItemIdentifier="9D8640C5-C152-46D8-8E8F-534AB77ADC43" label="" paletteLabel="PDF Selectah" sizingBehavior="auto" id="jMR-Ud-QWz">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="100" height="26"/>
-                        <size key="maxSize" width="100" height="26"/>
                         <popUpButton key="view" verticalHuggingPriority="750" id="Js9-Gr-1lb">
                             <rect key="frame" x="0.0" y="14" width="100" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -500,10 +490,8 @@
                             </connections>
                         </popUpButton>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="5F392D81-92FF-4013-AD25-A071CA64C9CF" label="" paletteLabel="Document Forward" image="NSGoRightTemplate" id="wOn-uD-8vx">
+                    <toolbarItem implicitItemIdentifier="5F392D81-92FF-4013-AD25-A071CA64C9CF" label="" paletteLabel="Document Forward" image="NSGoRightTemplate" sizingBehavior="auto" id="wOn-uD-8vx">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="36" height="25"/>
-                        <size key="maxSize" width="36" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="L2b-DH-wmF">
                             <rect key="frame" x="36" y="14" width="36" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -516,10 +504,8 @@
                             <action selector="goForwardDocument:" target="Voe-Tx-rLC" id="A9J-XB-aJR"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="C84D5016-5FFF-41EB-B05E-D2CFD53851D3" label="" paletteLabel="Document Back" image="NSGoLeftTemplate" id="GDK-aI-xFx">
+                    <toolbarItem implicitItemIdentifier="C84D5016-5FFF-41EB-B05E-D2CFD53851D3" label="" paletteLabel="Document Back" image="NSGoLeftTemplate" sizingBehavior="auto" id="GDK-aI-xFx">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="36" height="25"/>
-                        <size key="maxSize" width="36" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="QTt-wY-eky">
                             <rect key="frame" x="27" y="14" width="36" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
