@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		034B30862739505400DAD5C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 034B30852739505400DAD5C3 /* README.md */; };
-		03DCA1F1273A818E002A06D0 /* Capture10.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F0273A818E002A06D0 /* Capture10.png */; };
-		03DCA1F4273A82DE002A06D0 /* capture30.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F2273A82DE002A06D0 /* capture30.pdf */; };
 		03DCA1F5273A82DE002A06D0 /* capture20.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F3273A82DE002A06D0 /* capture20.pdf */; };
+		03DCA1F7273A8647002A06D0 /* Capture40.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F6273A8647002A06D0 /* Capture40.png */; };
+		03DCA1F9273A866C002A06D0 /* Capture50.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DCA1F8273A866C002A06D0 /* Capture50.png */; };
 		220863D51D99D11D00CC0937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220863D41D99D11D00CC0937 /* AppDelegate.swift */; };
 		220863D81D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 220863D61D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodeld */; };
 		220863DA1D99D11D00CC0937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220863D91D99D11D00CC0937 /* Assets.xcassets */; };
@@ -19,9 +19,9 @@
 
 /* Begin PBXFileReference section */
 		034B30852739505400DAD5C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		03DCA1F0273A818E002A06D0 /* Capture10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture10.png; sourceTree = "<group>"; };
-		03DCA1F2273A82DE002A06D0 /* capture30.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = capture30.pdf; sourceTree = "<group>"; };
 		03DCA1F3273A82DE002A06D0 /* capture20.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = capture20.pdf; sourceTree = "<group>"; };
+		03DCA1F6273A8647002A06D0 /* Capture40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture40.png; sourceTree = "<group>"; };
+		03DCA1F8273A866C002A06D0 /* Capture50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture50.png; sourceTree = "<group>"; };
 		220863D11D99D11D00CC0937 /* OSX-PDF-Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSX-PDF-Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		220863D41D99D11D00CC0937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220863D71D99D11D00CC0937 /* OSX_PDF_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OSX_PDF_Viewer.xcdatamodel; sourceTree = "<group>"; };
@@ -44,9 +44,9 @@
 		034B30872739509900DAD5C3 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
-				03DCA1F0273A818E002A06D0 /* Capture10.png */,
 				03DCA1F3273A82DE002A06D0 /* capture20.pdf */,
-				03DCA1F2273A82DE002A06D0 /* capture30.pdf */,
+				03DCA1F8273A866C002A06D0 /* Capture50.png */,
+				03DCA1F6273A8647002A06D0 /* Capture40.png */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				034B30862739505400DAD5C3 /* README.md in Resources */,
+				03DCA1F9273A866C002A06D0 /* Capture50.png in Resources */,
 				03DCA1F5273A82DE002A06D0 /* capture20.pdf in Resources */,
-				03DCA1F4273A82DE002A06D0 /* capture30.pdf in Resources */,
-				03DCA1F1273A818E002A06D0 /* Capture10.png in Resources */,
+				03DCA1F7273A8647002A06D0 /* Capture40.png in Resources */,
 				220863DA1D99D11D00CC0937 /* Assets.xcassets in Resources */,
 				220863DD1D99D11D00CC0937 /* MainMenu.xib in Resources */,
 			);

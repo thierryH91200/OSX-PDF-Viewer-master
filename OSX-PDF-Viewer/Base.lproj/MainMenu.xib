@@ -384,10 +384,8 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="akh-ZH-Nzg"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Baq-fo-Vxs"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Vur-VM-BIf"/>
-                    <toolbarItem implicitItemIdentifier="6485D005-E108-4605-93AC-DF25E6DFAC8D" label="" paletteLabel="Page Number" id="Z3m-Lw-2Wd">
+                    <toolbarItem implicitItemIdentifier="6485D005-E108-4605-93AC-DF25E6DFAC8D" label="" paletteLabel="Page Number" sizingBehavior="auto" id="Z3m-Lw-2Wd">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="45" height="20"/>
-                        <size key="maxSize" width="61" height="45"/>
                         <textField key="view" verticalHuggingPriority="750" id="MCf-w9-pkp">
                             <rect key="frame" x="9" y="14" width="61" height="23"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -401,10 +399,8 @@
                             <action selector="jumpToPage:" target="Voe-Tx-rLC" id="ZxS-Ol-UVa"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="A29C32C6-2D9E-4697-98E0-07AA3385B987" label="" paletteLabel="Fit to Window" title="Scale" id="cmN-Bp-Dyp">
+                    <toolbarItem implicitItemIdentifier="A29C32C6-2D9E-4697-98E0-07AA3385B987" label="" paletteLabel="Fit to Window" title="Scale" sizingBehavior="auto" id="cmN-Bp-Dyp">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="82" height="32"/>
-                        <size key="maxSize" width="82" height="34"/>
                         <button key="view" verticalHuggingPriority="750" id="JUE-ba-Gl3">
                             <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

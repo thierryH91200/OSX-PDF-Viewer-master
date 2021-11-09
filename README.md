@@ -8,7 +8,15 @@
 
 
 <p align="center">
-<img src="Doc/Capture10.png" alt="Sample">
+<img src="Doc/Capture40.png" alt="Sample">
+<p align="center">
+<em>page 2</em> 
+</p>
+</p>
+
+
+<p align="center">
+<img src="Doc/Capture20.png" alt="Sample">
 <p align="center">
 <em>presentation</em> 
 </p>
@@ -21,12 +29,6 @@
 </p>
 </p>
 
-<p align="center">
-<img src="Doc/Capture40.png" alt="Sample">
-<p align="center">
-<em>page 2</em> 
-</p>
-</p>
 
 
 # OSX-PDF-Viewer
